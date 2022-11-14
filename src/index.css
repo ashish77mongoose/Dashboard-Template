@@ -1,0 +1,236 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@layer base {
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    background: transparent !important;
+    transition: background 5000s ease-in;
+}
+.device_check select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+   
+    
+}
+
+  [type="text"],
+  [type="email"],
+  [type="url"],
+  [type="password"],
+  [type="number"],
+  [type="date"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="search"],
+  [type="tel"],
+  [type="time"],
+  [type="week"],
+  [multiple],
+  textarea,
+  select {
+    @apply transition duration-200 px-4 py-2 border-[1.8px] w-full border-grey-60 rounded-lg h-[56px] placeholder-grey-60;
+  }
+  [type="text"]:focus,
+  [type="email"]:focus,
+  [type="url"]:focus,
+  [type="password"]:focus,
+  [type="number"]:focus,
+  [type="date"]:focus,
+  [type="datetime-local"]:focus,
+  [type="month"]:focus,
+  [type="search"]:focus,
+  [type="tel"]:focus,
+  [type="time"]:focus,
+  [type="week"]:focus,
+  [multiple]:focus,
+  textarea:focus,
+  select:focus,
+   [type="text"]:focus-visible,
+  [type="email"]:focus-visible,
+  [type="url"]:focus-visible,
+  [type="password"]:focus-visible,
+  [type="number"]:focus-visible,
+  [type="date"]:focus-visible,
+  [type="datetime-local"]:focus-visible,
+  [type="month"]:focus-visible,
+  [type="search"]:focus-visible,
+  [type="tel"]:focus-visible,
+  [type="time"]:focus-visible,
+  [type="week"]:focus-visible,
+  [multiple]:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible  {
+    @apply border-grey-90 shadow-none;
+    --tw-ring-color: #a19f9d !important;
+    --tw-ring-shadow: unset !important;
+    border-color: #a19f9d !important;
+    outline:unset !important;
+  }
+  [type="text"].green:focus,
+  [type="email"].green:focus,
+  [type="url"].green:focus,
+  [type="password"].green:focus,
+  [type="number"].green:focus,
+  [type="date"].green:focus,
+  [type="datetime-local"].green:focus,
+  [type="month"].green:focus,
+  [type="search"].green:focus,
+  [type="tel"].green:focus,
+  [type="time"].green:focus,
+  [type="week"].green:focus,
+  [multiple].green:focus,
+  textarea.green:focus,
+  select.green:focus {
+    @apply border-green-dark;
+    --tw-ring-color: #107c10 !important;
+    border-color: #107c10 !important;
+  }
+  [type="text"].red:focus,
+  [type="email"].red:focus,
+  [type="url"].red:focus,
+  [type="password"].red:focus,
+  [type="number"].red:focus,
+  [type="date"].red:focus,
+  [type="datetime-local"].red:focus,
+  [type="month"].red:focus,
+  [type="search"].red:focus,
+  [type="tel"].red:focus,
+  [type="time"].red:focus,
+  [type="week"].red:focus,
+  [multiple].red:focus,
+  textarea.red:focus,
+  select.red:focus {
+    @apply border-red-dark;
+    --tw-ring-color: #a80000 !important;
+    border-color: #a80000 !important;
+  }
+  input[type="radio"] {
+    @apply text-themecyan-darker ring-themecyan-darker !important;
+  }
+
+  * {
+    line-height: 1.25;
+    font-style: normal;
+    font-size:16px;
+  }
+
+
+  html {
+    scroll-behavior: smooth;
+  }
+  body{
+    @apply bg-themecyan-lighter;
+  }
+  h1,.h1 {
+    @apply text-black font-montserrat text-[40px] font-black tablet:text-[50px] md:text-[56px] lg:text-[72px] xxl:text-[76px];
+    line-height: 1.25;
+  }
+  h2 ,.h2{
+    @apply text-black font-montserrat text-[28px] tablet:text-[48px] font-black lg:text-[48px] xxl:text-[54px];
+    line-height: 1.25;
+  }
+  h3,.h3 {
+    @apply text-black font-montserrat text-[28px] font-black tablet:text-[32px] md:text-[36px] lg:text-[40px] xxl:text-[45px];
+    line-height: 1.25;
+  }
+  h4,.h4 {
+    @apply text-black font-montserrat text-[21px] font-black tablet:text-[25px] md:text-[28px] lg:text-[32px] xxl:text-[36px];
+    line-height: 1.25;
+  }
+  h5,.h5 {
+    @apply text-black font-montserrat text-[20px] font-bold  tablet:text-[24px] xxl:text-[28px];
+    line-height: 1.25;
+  }
+  h6,.h6 {
+    @apply text-black font-montserrat text-[20px] font-bold xxl:text-[24px];
+    line-height: 1.25;
+  }
+  p {
+    @apply text-[16px] xxl:text-[18px] font-normal text-themecyan-text;
+    line-height: 1.2;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  .container{
+    @apply mx-auto xxl:max-w-[1550px] tablet:max-w-[700px] md:max-w-[900px] lg:max-w-[1100px] xl:max-w-[1280px] px-6 tablet:px-0 !important;
+  }
+}
+@layer components {
+  .mycenter {
+    @apply flex justify-center items-center;
+  }
+  .btn {
+    @apply h-[56px] max-w-[354px] cursor-pointer  font-medium text-[16px] rounded-2xl bg-themecyan-darker  px-[28px] text-white mycenter;
+  }
+   .btn-outline {
+    @apply h-[48px] max-w-[354px] cursor-pointer  font-medium text-[16px]  bg-transparent rounded-md border-2 border-themecyan-darker   px-[20px]  mycenter hover:bg-themecyan-darker hover:text-white transition-all duration-300;
+  }
+  .btn2 {
+    @apply mycenter cursor-pointer gap-3 bg-themecyan-lighter2 rounded-xl h-[45px] text-themecyan-darker px-5;
+  }
+}
+@layer utilities {
+   .drag_elements_wrapper{
+    @apply  max-h-[400px] overflow-auto;
+    
+  }
+   .drag_elements_wrapper::-webkit-scrollbar{
+    @apply w-[10px] bg-themecyan-light pr-2;
+    
+  }
+   .drag_elements_wrapper::-webkit-scrollbar-thumb{
+    @apply w-[10px] bg-themecyan-darker;
+    
+  }
+  .para {
+    @apply text-[16px] xxl:text-[18px] font-medium;
+  }
+  .subtitle {
+    @apply text-[16px] xxl:text-[18px] font-medium;
+  }
+  .caption {
+    @apply text-[16px] xxl:text-[18px] font-medium;
+  }
+  .shadow4 {
+    box-shadow: 0px 0.3px 0.9px rgba(0, 0, 0, 0.1),
+      0px 1.6px 3.6px rgba(0, 0, 0, 0.13);
+  }
+  .shadow8 {
+    box-shadow: 0px 0.6px 1.8px rgba(0, 0, 0, 0.1),
+      0px 3.2px 7.2px rgba(0, 0, 0, 0.13);
+  }
+  .shadow16 {
+    box-shadow: 0px 1.2px 3.6px rgba(0, 0, 0, 0.1),
+      0px 6.4px 14.4px rgba(0, 0, 0, 0.13);
+  }
+  .shadow64 {
+    box-shadow: 0px 4.8px 14.4px rgba(0, 0, 0, 0.18),
+      0px 25.6px 57.6px rgba(0, 0, 0, 0.22);
+  }
+  label {
+    font-size: 14px;
+  }
+
+
+ 
+ 
+
+ 
+}
+
+
